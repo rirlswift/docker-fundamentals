@@ -1,0 +1,49 @@
+== Images
+
+:icons: font
+ifndef::imagesdir[:imagesdir: ../images]
+
+Now that we understand that a *Docker* container is simply a process running in a sandbox as constrained by kernel-level programming constructs, the question about how to define such containers becomes apparent. We have the basic notion of an image - an instruction template that is used to define a container. In addition, we might have the notion that such images consist of a hierarchy of layers, each layer of which defines a part of the file system content isolated within the process sand-box (i.e., the container). This is represented below.
+
+image::images.svg[Image Hierarchy]
+
+The above diagram depicts a web-server running in a container. The content of the container is composed using a file system hierarchy, that is in turn built up from a series of +LAYERS+. The base layer +SCRATCH+ is simply an initialized file store. The +ALPINE+ layer contains a minimal (embedded) Linux OS consisting of the root (/) file system and basic package management functionalities which are necessary to install any additional software. Finally. the +NGINX+ layer contains the actual web-server binaries (/usr/local/nginx).
+
+=== Defining an Image
+
+Docker can build images by reading instructions from a +Dockerfile+. A +Dockerfile+ is a text document that contains all the commands a user would call on the command line to assemble an image. The following is an example +Dockerfile+ that corresponds to the above diagram.
+
+[source,dockerfile]
+----
+FROM nginx:alpine # <1>
+COPY ./watchmen /usr/share/nginx/html # <2>
+----
+<1> Defines the base docker image -- in this case an +NGINX+ web-server running on +ALPINE+
+<2> +COPY+ the local content (from the watchmen sub-directory) into the standard content location defined by +NGINX+
+
+
+=== Building an Image
+
+As will be described in detail under the +API+ discussion, the #docker build# command is used to create Docker images from the instructions contained in  a +Dockerfile+.
+
+[source, bash]
+----
+docker build --file Dockerfile \  #<1>
+--tag webdeploy:v1 #<2>
+----
+where:
+
+<1> Defines the Dockerfile containing the instructions needed to build the image, and
+<2> specifies the name of the output docker image.
+
+=== Running a Container
+
+Once a docker image is built it can be run as a container using #docker run#
+
+[source]
+---
+docker run webdeploy:v1 # <1>
+---
+where:
+
+<1> specifies the docker image created using the previous #docker build# command

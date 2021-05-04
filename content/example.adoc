@@ -1,0 +1,45 @@
+== Example
+
+:icons: font
+ifndef::imagesdir[:imagesdir: ../images]
+
+
+=== Install Virtual Laboratory Applicance
+
+A virtual applicance compatible with either the VMWare or the Virtual Box virtualization software has been provided for this lab.  The applicance has all the software and code necessary to complete the example for the *Docker Fundamentals* laboratory.
+
+The applicance setup for this lab is as follows
+
+. Download and install the virtualization software toolset.
+. Download and extract the virtual appliance for the lab.
+. Run the virtual applicance using the virtualization software and log into the applicance.
+. Complete the laboratory steps for *Docker Fundamentals* using the applicance. 
+
+
+=== Docker Fundamentals Laboratory
+
+. Open a termninal and run a command to watch docker images during the exercise.
+. Open a terminal to monitor show a live stream of docker containers during the exercise.
+. Open a terminal and change to the $HOME/docker-fundamentals directory.
+. Open VsCode and open the Docker Fundamentals [Dev Container]
+. Watch the docker image monitor and container live-stream.
+
+==== Build the NGINX web application (in VsCode)
+
+. Run scripts/clean.sh
+. Run scripts/build.sh
+. Watch the terminal monitors
+. Review the scripts/build.sh and associated dockerfile (Dockerfile)
+. Open web browser to http://localhost:9090 [Docker Watchmen]
+
+
+==== Run the Watchmen web container (in VsCode)
+
+. Run scripts/run.sh
+. Watch...
+. Run scripts/validate.sh
+. Open web browser to http://localhost:9090 [Docker Watchmen]
+. Review scripts/run.sh
+
+==== Exit VsCode and Cleanup the Laboratory
+. Run scripts/clean.sh from the terminal after exiting VsCode.

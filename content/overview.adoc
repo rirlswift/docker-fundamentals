@@ -1,0 +1,9 @@
+== Overview
+
+ifndef::imagesdir[:imagesdir: ../images]
+
+The following diagram represents the three main elements of the Docker architecture
+
+image::overview.svg[Process, pdfwidth=50%]
+
+The +RUN TIME+ aspect of Docker pertains to the elements as they are executing (i.e., as processes; aka CONTAINERS). The +BUILD TIME+ aspects involve the mechanisms provided by Docker to define and organize sets of instructions for creating containers (e.g., IMAGES). All Docker operations are avaialble as a set of +APPLICATION PROGRAMMING INTERFACES+, collectively referred to as the +DOCKER API+. This API is distributed in the sense that there are a  set of +CLIENT+ interfaces the make requests of the +SERVER+ implementation of the API. In the Docker architecture everything happens on (a potentially remote, but often local) host -- the so-called DOCKER_HOST.

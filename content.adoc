@@ -1,0 +1,35 @@
+= Docker Fundamentals
+
+ifndef::imagesdir[:imagesdir: images]
+:source-highlighter: rouge
+:toc:
+:toclevels: 4
+:icons: font
+
+The goal of this document is to provide an introduction to the fundamentals of Docker by answering a basic question: *What is a (docker) container?*
+
+An architectural overview of the Docker technology provides the conceptual framework for the discussion. The most basic definition of a container is provided - a sandbox process running on a Linux system. We then understand how to define containers - thereby, introducing the idea of images: hierarchical templates that are used to instantiate containers. We'll understand that Dockerfiles are simply sets of instructions used to create (build) images, which are then executed as containers. We'll then understand that Docker provides a set of (distributed) application programming interfaces that interact with a central server - the DOCKER HOST - that is running as a daemon. Finally, we'll take a look at a hands-on example by creating a Docker file for a simple (NGINX) web-server container -- one that serves a single image to the user.
+
+
+This is outlined as follows:
+
+. Architectural Overview - Conceptual organization of Docker.
+
+. Run time : Containers - Linux/Processes/Sandboxes > Basic Definition of a Container.
+
+. Build time: Images - Hierarchical definition and instructions (Dockerfiles) > Building a Container.
+
+. API: Application Programming Interfaces - Client, Daemon (server), and Host > Under the hood.
+
+. Conclusion: Wrapping it together - A simple web server example > NGINX Watchmen.
+
+
+include::content/overview.adoc[]
+
+include::content/containers.adoc[]
+
+include::content/images.adoc[]
+
+include::content/api.adoc[]
+
+include::content/example.adoc[]
