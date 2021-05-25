@@ -17,7 +17,7 @@ These aspects are supported by elements of the +Docker Client+  API: namely
 In addition, the +Docker Client+ API provides various elements for managing the life-cycle of containers and images (docker sub-commands). The #docker# command and its sub-commands communicate with the +Docker Daemon+ which is a daemon (root-level) process running on the ++DOCKER_HOST++. This +Docker Server+ API provides additional services such as those supporting various caches (image and build), networking, volumes, and storage. By default, all the Docker related meta-data are persisted in the daemon file system under /usr/lib/docker. This architecture is represented by the following image.
 
 
-image::api.svg[API]
+image::api.svg[API, pdfwidth=50%]
 
 
 .Docker Commands [sub-commands of +docker+]
@@ -25,38 +25,38 @@ image::api.svg[API]
 |===
 |Command |Description |Example
 
-| https://docs.docker.com/engine/reference/run/[run]
+| https://docs.docker.com/engine/reference/commandline/run/[run]
 | Run a docker container.
   Specify the image to use for the container and various runtime options.
 | docker run --name nginx-docker-swift -d -p 9090:80 webdeploy:v1
 
 
-| https://docs.docker.com/engine/reference/build[build]
+| https://docs.docker.com/engine/reference/commandline/build/[build]
 | Build a docker image from a dockerfile and a context.
   Specify the dockerfile containing the instructions and a PATH or URL to the context.
   The  build process can refer to any of the files in the context.
 | docker build --file Dockerfile --tag webdeploy:v1  .
 
-| https://docs.docker.com/engine/reference/images[images]
+| https://docs.docker.com/engine/reference/commandline/images/[images]
 | Show top-level docker images.
   Includes the image repository, tags, and size.
 | docker images
 
-| https://docs.docker.com/engine/reference/rmi[rmi]
+| https://docs.docker.com/engine/reference/commandline/rmi/[rmi]
 | Removes one or more docker images.
   Removes (and un-tags) one or more images from the host node.
 | docker rmi --force webdeploy:v1
 
-| https://docs.docker.com/engine/reference/rm[rm]
+| https://docs.docker.com/engine/reference/commandline/rm/[rm]
 | Removes one or more docker containers.
 | docker rm nginx-docker-swift 
 
-| https://docs.docker.com/engine/reference/ps[ps]
+| https://docs.docker.com/engine/reference/commandline/ps/[ps]
 | List docker containers.
   Listing includes the id of the container, the associated image, and the container name.
 | docker ps
 
-| https://docs.docker.com/engine/reference/stats[stats]
+| https://docs.docker.com/engine/reference/commandline/stats/[stats]
 | Displays a live stream of container(s) resource usage statistics.
   Data can be limited to one or more specific containers by specifying 
   a list of container ids or names separated by a space.

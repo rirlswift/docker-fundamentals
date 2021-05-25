@@ -41,9 +41,9 @@ where:
 Once a docker image is built it can be run as a container using #docker run#
 
 [source]
----
+----
 docker run webdeploy:v1 # <1>
----
+----
 where:
 
 <1> specifies the docker image created using the previous #docker build# command

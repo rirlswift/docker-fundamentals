@@ -4,24 +4,24 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 
-=== Install Virtual Laboratory Applicance
+=== Install Virtual Laboratory Appliance
 
-A virtual applicance compatible with either the VMWare or the Virtual Box virtualization software has been provided for this lab.  The applicance has all the software and code necessary to complete the example for the *Docker Fundamentals* laboratory.
+A virtual appliance compatible with either the VMWare or the Virtual Box virtualization software has been provided for this lab.  The appliance   has all the software and code necessary to complete the example for the *Docker Fundamentals* laboratory.
 
-The applicance setup for this lab is as follows
+The appliance setup for this lab is as follows
 
-. Download and install the virtualization software toolset.
-. Download and extract the virtual appliance for the lab.
-. Run the virtual applicance using the virtualization software and log into the applicance.
-. Complete the laboratory steps for *Docker Fundamentals* using the applicance. 
+. Download and install the https://swiftengineering.sharepoint.com/:u:/r/sites/SwiftX-HIL/Shared%20Documents/DevOps/training/docker-fundamentals/VMware-player-16.1.2-17966106.exe?csf=1&web=1&e=X1Mbee[virtualization software toolset].
+. Download and extract the https://swiftengineering.sharepoint.com/:u:/r/sites/SwiftX-HIL/Shared%20Documents/DevOps/training/docker-fundamentals/fundamentals.zip?csf=1&web=1&e=odKM7N[virtual appliance] for the lab.
+. Run the virtual appliance   using the virtualization software and log into the appliance  .
+. Complete the laboratory steps for *Docker Fundamentals* using the appliance  .
 
 
 === Docker Fundamentals Laboratory
 
-. Open a termninal and run a command to watch docker images during the exercise.
+. Open a terminal and run a command to watch docker images during the exercise.
 . Open a terminal to monitor show a live stream of docker containers during the exercise.
 . Open a terminal and change to the $HOME/docker-fundamentals directory.
-. Open VsCode and open the Docker Fundamentals [Dev Container]
+. Open VsCode and open the Docker Fundamentals [Dev Container].
 . Watch the docker image monitor and container live-stream.
 
 ==== Build the NGINX web application (in VsCode)
@@ -29,7 +29,7 @@ The applicance setup for this lab is as follows
 . Run scripts/clean.sh
 . Run scripts/build.sh
 . Watch the terminal monitors
-. Review the scripts/build.sh and associated dockerfile (Dockerfile)
+. Review the scripts/build.sh and associated dockerfile (Dockerfile).
 . Open web browser to http://localhost:9090 [Docker Watchmen]
 
 

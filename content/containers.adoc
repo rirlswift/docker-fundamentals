@@ -4,18 +4,18 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 
-Most us of have the idea that within an operating system (OS) programs are represented as processes. These processes have access to OS resources (such as the file system) and are visible to one other (via a shared name, or process, space). They can communicate with one another via shared resources (files, named pipes, network sockets, and etc).  This well and good, as the standard sharing mechanisms allow the programs to work together to accomplish some desired set of functions. This situation is represented in the following diagram.
+Most us of have the idea that within an operating system (OS) programs are represented as processes. These processes have access to OS resources (such as the file system) and are visible to one other (via a shared name, or process, space). They can communicate with one another via shared resources.  This well and good, as the standard sharing mechanisms allow the programs to work together to accomplish some desired set of functions. This situation is represented in the following diagram.
 
 image::os-process.svg[OS Processes]
 
 === Isolation
 
-Now supposed we want *explicit* control over resource and/or name space visibility for a process. We have the idea of a running a process in a *_sandbox_*. Docker (and other) containers are simply sand-boxed (isolated) processes that use certain capabilities of the OS (kernel) to provide both resource (using cgroups) and process (namespace) isolation. The life-cycle of a container is tightly-coupled to that of its process. If the process ends (or is terminated) then so is the container. The inverse is also true: stopping the container ends its associated process. The following diagram depicts the runtime view of a container.
+Now supposed we want *explicit* control over resource and/or name space visibility for a process. We have the idea of a running a process in a *_sandbox_*. Docker (and other) containers are simply sandbox (isolated) processes that use certain capabilities of the OS (kernel) to provide both resource (using cgroups) and process (namespace) isolation. The life-cycle of a container is tightly-coupled to that of its process. If the process ends (or is terminated) then so is the container. The inverse is also true: stopping the container ends its associated process. The following diagram depicts the runtime view of a container.
 
 image::container-process.svg[Container Processes]
 
 [IMPORTANT]
-A *DOCKER* container is a process that is isolated in terms of its (sub) processes and resources. Resources are constrainted using https://man7.org/linux/man-pages/man7/cgroups.7.html[control groups] (cgroups) while process (visibility) is restricted via https://man7.org/linux/man-pages/man7/namespaces.7.html[name spaces]. *Both* of these are constructs defined within the Linux kernel
+A *DOCKER* container is a process that is isolated in terms of its (sub) processes and resources. Resources are constrained using https://man7.org/linux/man-pages/man7/cgroups.7.html[control groups] while process (visibility) is restricted via https://man7.org/linux/man-pages/man7/namespaces.7.html[name spaces]. *Both* of these are constructs defined within the Linux kernel.
 
 
 The diagram shows a simple container that bas been set up to run a web-server https://hub.docker.com/_/nginx[NGINX] (said 'engine-x').
