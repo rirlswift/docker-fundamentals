@@ -11,7 +11,7 @@ A virtual appliance compatible with either the VMWare or the Virtual Box virtual
 The appliance setup for this lab is as follows
 
 . Download and install the https://swiftengineering.sharepoint.com/:u:/r/sites/SwiftX-HIL/Shared%20Documents/DevOps/training/docker-fundamentals/VMware-player-16.1.2-17966106.exe?csf=1&web=1&e=X1Mbee[virtualization software toolset].
-. Download and extract the https://swiftengineering.sharepoint.com/:u:/r/sites/SwiftX-HIL/Shared%20Documents/DevOps/training/docker-fundamentals/fundamentals.zip?csf=1&web=1&e=odKM7N[virtual appliance] for the lab.
+. Download and extract the https://swiftengineering.sharepoint.com/:u:/r/sites/SwiftX-HIL/Shared%20Documents/DevOps/training/docker-fundamentals/DockerFundamentals.zip?csf=1&web=1&e=QdYePp[virtual appliance] for the lab.
 . Run the virtual appliance   using the virtualization software and log into the appliance  .
 . Complete the laboratory steps for *Docker Fundamentals* using the appliance  .
 
