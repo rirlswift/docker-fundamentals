@@ -1,15 +1,16 @@
 {
   "name": "Docker Fundamentals.",
   "context": "..",
-  "image": "swiftx/ubuntu-dood:v16",
+  "image": "swiftx/asciidoctor-core:v2",
   "runArgs": [
     "--name","swift-docker-fun",
     "--hostname","swift-docker-fun",
     "--workdir","/workspaces/fundamentals",
     "-u","swift",
+    "-e","CONTAINER_HOME=/home/swift/.alpine",
     "-v","${env:HOME}${env:USERPROFILE}/.gitconfig:/home/swift/.gitconfig",
     "-v","${env:HOME}${env:USERPROFILE}/.ssh:/home/swift/.ssh",
-    "-v","${env:HOME}${env:USERPROFILE}/.devcontainer:/home/swift",
+    "-v","${env:HOME}${env:USERPROFILE}/.devcontainer:/home/swift/.alpine",
     "-v","${env:HOME}${env:USERPROFILE}/bin:/home/swift/bin",
     "-v","/var/run/docker.sock:/var/run/docker.sock",
     "--rm",
@@ -18,9 +19,10 @@
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
 },
+"postCreateCommand": "echo source $HOME/.alpine/alpine.sh > $HOME/.bashrc",
 "extensions": [
 	"asciidoctor.asciidoctor-vscode",
-	"ms-azuretools.vscode-docker",
-	"tomoki1207.pdf"
-]
+ 	"ms-azuretools.vscode-docker",
+ 	"tomoki1207.pdf"
+ ]
 }
