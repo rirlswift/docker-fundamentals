@@ -6,7 +6,12 @@ function Here() {
 }
 
 ### Main
-Here; status=0
-echo "[$_self] - ENTER [$@]"
+Here; status=1
+echo "[$_self] - ENTER [$@][$_here]"
+set -x
+   cp -vf  ${_here}/publish/${SWIFT_CISB_DOCUMENT_BUNDLE}.pdf  ${_here}/content.pdf
+   cp -vr  ${_here}/images ${_here}/publish/sites/images && status=0
+set +x
 echo "[$_self] - LEAVE [$status]"
+
 exit ${status}
