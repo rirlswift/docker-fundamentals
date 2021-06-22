@@ -11,13 +11,13 @@ echo "[$_self] - ENTER [$@][$_here]"
 
 set -x
    [[ -d $_here/publish ]] && rm -rf $_here/publish  
-   mkdir -p $_here/publish/sites && \
+   mkdir -p $_here/publish && \
    asciidoctor-pdf content.adoc --quiet \
    --out-file ${SWIFT_CISB_DOCUMENT_BUNDLE}.pdf \
    --destination-dir ${_here}/publish &&
    asciidoctor-revealjs content.adoc --quiet \
    --out-file ${SWIFT_CISB_DOCUMENT_BUNDLE}.html \
-   --destination-dir ${_here}/publish/sites &&
+   --destination-dir ${_here}/publish &&
    status=0
 set +x 
 

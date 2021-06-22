@@ -10,7 +10,9 @@ Here; status=1
 echo "[$_self] - ENTER [$@][$_here]"
 set -x
    cp -vf  ${_here}/publish/${SWIFT_CISB_DOCUMENT_BUNDLE}.pdf  ${_here}/content.pdf
-   cp -vr  ${_here}/images ${_here}/publish/sites/images && status=0
+   cp -vr  ${_here}/images                                     ${_here}/publish/images  && status=0
+   cp -vr  ${_here}/content                                    ${_here}/publish/content && status=0
+   cp -vf  ${_here}/content.adoc                               ${_here}/publish         && status=0
 set +x
 echo "[$_self] - LEAVE [$status]"
 
