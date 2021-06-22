@@ -1,1 +1,4 @@
 .idea/
+publish/
+content.pdf
+.swift_ci/workflow/tests
