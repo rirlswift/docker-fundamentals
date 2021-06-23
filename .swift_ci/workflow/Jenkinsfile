@@ -284,6 +284,8 @@ pipeline {
   }
   post {
     always {
+      // @TODO: Refactor by extending SWIFT_CISB_POST_NOTIIFIER default
+      jiraSendBuildInfo site: 'swiftflightsoftware.atlassian.net'
       script {
         DefaultWorkflow(SWIFT_CISB_POST_NOTIFIER)
       }
