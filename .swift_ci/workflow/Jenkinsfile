@@ -226,7 +226,7 @@ pipeline {
       }
     }
     stage ('IsMaster') {
-      when { anyOf { branch 'master'; branch 'swift_master' } }
+      when { anyOf { branch 'master'; branch 'swift_master'; branch 'main' } }
       steps {
         script {
           SetCISBRelease("${SWIFT_CISB_CHANNEL_ISMASTER}")
