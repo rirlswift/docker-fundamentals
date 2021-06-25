@@ -61,7 +61,7 @@ LoadConfiguration "$_here/$SWIFT_CISB_ADAPTER_PATH/default.properties"
 LoadConfiguration "$_here/$SWIFT_CISB_ADAPTER_PATH/workflow.properties"
 LoadConfiguration "$_here/$SWIFT_CISB_ADAPTER_PATH/channel.properties"
 
-printenv| sort| grep SWIFT_
+#printenv| sort| grep SWIFT_
 
 }
 
