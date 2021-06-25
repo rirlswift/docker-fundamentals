@@ -4,19 +4,44 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Documentation Pipeline",
+            "type": "shell",
+            "command": ".swift_ci/workflow/pipeline.template.sh",
+            "presentation": {
+                "panel":"dedicated",
+                "showReuseMessage": false,
+                "reveal": "revealProblems"
+           }
+        },
+        {
             "label": "Start Presentation Server",
             "type": "shell",
-            "command": "presentation/start.sh"
+            "command": "presentation/start.sh",
+            "presentation": {
+                "panel":"dedicated",
+                "showReuseMessage": false,
+                "reveal": "revealProblems"
+            }
         },
         {
             "label": "Stop  Presentation Server",
             "type": "shell",
-            "command": "presentation/stop.sh"
+            "command": "presentation/stop.sh",
+            "presentation": {
+                "panel":"dedicated",
+                "showReuseMessage": false,
+                "reveal": "revealProblems"
+            }
         },
         {
             "label": "Deploy Presentation",
             "type": "shell",
-            "command": "presentation/update.sh"
+            "command": "presentation/update.sh",
+            "presentation": {
+                "panel":"dedicated",
+                "showReuseMessage": false,
+                "reveal": "revealProblems"
+            }
         }
     ]
 }

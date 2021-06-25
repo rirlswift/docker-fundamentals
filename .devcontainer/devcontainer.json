@@ -22,7 +22,8 @@
 "postCreateCommand": "echo source $HOME/.alpine/alpine.sh > $HOME/.bashrc",
 "extensions": [
 	"asciidoctor.asciidoctor-vscode",
- 	"ms-azuretools.vscode-docker",
- 	"tomoki1207.pdf"
- ]
+	"ms-azuretools.vscode-docker",
+	"tomoki1207.pdf",
+	"spmeesseman.vscode-taskexplorer"
+]
 }
